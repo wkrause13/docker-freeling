@@ -25,4 +25,4 @@ RUN rm -rf /tmp/freeling-3.1.source
 
 EXPOSE 50005
 ENV FREELINGSHARE /usr/local/share/freeling
-CMD echo 'Hello world' | analyze -f $FREELINGSHARE/config/en.cfg | grep -c 'world world NN 1'
+CMD echo 'Hola amigo' | analyze -f $FREELINGSHARE/config/es.cfg | grep -c 'world world NN 1'
