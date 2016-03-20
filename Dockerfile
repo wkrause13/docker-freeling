@@ -13,7 +13,7 @@ RUN wget https://s3.amazonaws.com/freeling.image.31/freeling-3.1.source.tar.gz
 RUN mkdir /tmp/freeling-3.1
 RUN tar xvzf freeling-3.1.source.tar.gz -C /tmp/freeling-3.1
 WORKDIR /tmp/freeling-3.1
-RUN aclocal; libtoolize; autoconf; automake -a
+RUN autoreconf --install
 RUN ./configure
 RUN make
 RUN make install
